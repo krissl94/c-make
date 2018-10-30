@@ -1,8 +1,4 @@
-# I am a comment, and I want to say that the variable CC will be
-# the compiler to use.
 CC=g++
-# Hwy!, I am comment no.2. I want to say that CFLAGS will be the
-#options I'll pass to the compiler
 CFLAGS=-std=c++11 -Wall
 all: lastname firstname firstnameclass lastnameclass
 
@@ -24,6 +20,6 @@ firstname:
 	@sed 's/.*/"&",/' firstname.txt >> firstname_array.h
 	@echo "}; " >> firstname_array.h
 
-main: firstnameclass lastnameclass
+main: firstname lastname firstnameclass lastnameclass
 	$(CC) $(CFLAGS) -o generated firstname.o lastname.o main.cpp
 
