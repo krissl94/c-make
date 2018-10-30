@@ -23,3 +23,7 @@ firstname:
 main: firstname lastname firstnameclass lastnameclass
 	$(CC) $(CFLAGS) -o generated firstname.o lastname.o main.cpp
 
+clean:
+	rm *.o
+	rm *_array.h
+	rm generated
